@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Custom jQuery Code -->
+
+  </head>
+  <body class="bg-black">
+    <!-- navbar start -->
+<header class="mx-12">
+    <nav
+      class="w-full flex justify-between px-6 py-4 bg-black text-white sticky top-0">
+      <div class="w-40 flex items-center">
+        <img src="/dist/assets/tradetomato-logo.svg" alt />
+      </div>
+
+      <div class="hidden lg:flex items-center">
+        <ul class="flex gap-4 font-medium text-lg">
+
+          <li class=" relative z-20 group hover:text-green-400 "><a
+              href="#">Feature <i class="fa-solid fa-caret-down"></i></a>
+            <ul
+              class="absolute z-10 left-0 mt-2 bg-black shadow-lg rounded hidden group-hover:block w-48">
+              <li
+                class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Algorithms</li>
+              <li
+                class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Marketplace</li>
+              <li
+                class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Portfolio</li>
+              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">B2B</li>
+              <li
+                class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Stacking</li>
+
+            </ul>
+
+          </li>
+          <li class="hover:text-green-400"><a href="#">Token</a></li>
+
+          <li class="relative group hover:text-green-400"><a href="#">BuyTTM<i
+                class="fa-solid fa-caret-down ml-1"></i></a>
+            <ul
+              class="absolute left-0 mt-2 bg-black shadow-lg rounded hidden group-hover:block w-48 ">
+              <li
+                class="px-4 py-2  text-white hover:bg-gray-100 cursor-pointer">MaxC</li>
+              <li
+                class="px-4 py-2 text-white hover:bg-gray-100 cursor-pointer">Lbank</li>
+              <li
+                class="px-4 py-2 text-white hover:bg-gray-100 cursor-pointer">Pancakeswap</li>
+            </ul>
+
+          </li>
+
+          <!-- community start -->
+          <li class="hover:text-green-400 relative group"><a href="#">Community
+              <i class="fa-solid fa-caret-down"></i></a>
+            <ul
+              class="absolute left-0 hidden group-hover:block w-96 mt-2 bg-black shadow-lg rounded ">
+
+              <div class="flex items-center gap-3">
+                <div class=" flex flex-col  p-4">
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-telegram mr-2"></i>Telegram</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-twitter mr-2"></i>Twiiter</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-discord mr-2"></i>Discord</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-medium mr-2"></i>Medium</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-linkedin mr-2"></i>Linkdin</a>
+                  <a href="#" class="text-gray-400 hover:text-white"> <i
+                      class="fab fa-youtube mr-2"></i>youtube</a>
+
+                </div>
+                <div class=" flex flex-col  p-4">
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-telegram mr-2"></i>Telegram</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-twitter mr-2"></i>Twiiter</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-discord mr-2"></i>Discord</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-medium mr-2"></i>Medium</a>
+                  <a href="#" class="text-gray-400 hover:text-white"><i
+                      class="fab fa-linkedin mr-2"></i>Linkdin</a>
+                  <a href="#" class="text-gray-400 hover:text-white"> <i
+                      class="fab fa-youtube mr-2"></i>youtube</a>
+
+                </div>
+              </div>
+            </ul>
+          </li>
+          <!-- community end -->
+
+          <li class="hover:text-green-400"><a href="#">Docs</a></li>
+        </ul>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <div
+          class=" hidden lg:flex items-center  border border-white px-3 rounded-full py-1">
+          <img src="assets/icon-token.svg" alt="icon-token" />
+          <span class="font-bold ms-1">Staking</span>
+        </div>
+
+        <div
+          class="hidden lg:flex items-center gap-x-1 bg-white text-black rounded-full px-3 py-2">
+          <button class="text-black  text-md font-bold rounded-full">Launch
+            App</button>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="flex lg:hidden items-center">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
+  </header>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+
+    <div
+      class="bg-black text-white min-h-screen flex flex-col lg:flex-row items-start  justify-between px-6 lg:px-16  bg-cover bg-center py-16"
+      style="background-image: url('assets/background-dark-blobs2.jpg');">
+      <!-- Left Side -->
+      <div class="lg:w-1/2 text-center lg:text-left space-y-5 relative z-0 py-10">
+        <h1 class="text-4xl lg:text-5xl font-bold ">TRADE WHILE <br> <span
+            class="bg-gradient-to-r from-teal-500 to-green-500 text-transparent bg-clip-text text-7xl tracking-wider ">YOU
+            SLEEP</span></h1>
+        <p class="text-lg lg:text-xl text-gray-300">
+          Dream Big, Earn Bigger: Automated AI Trading Works 24/7!
+        </p>
+        <button
+          class="mt-4 inline-flex items-center text-white py-3 px-6 rounded-full border border-teal-400 font-bold  z-0  ">
+          Get Started Today <span class="ml-2 text-2xl font-bold ">→</span>
+        </button>
+        <!-- two balls div -->
+
+        <div class="relative">
+          <div
+            class="absolute left-6 w-28 h-24 bg-gray-500 rounded-full  animate-up-down"></div>
+          <div
+            class="w-36 h-36 absolute right-4 bg-gray-500 rounded-full animate-up-down"></div>
+          <!-- <img class="absolute right-[38.36rem] bottom-[0.25rem] w-25 up-down-animation" src="assets/hero-ball1.svg" alt="Ball Image"> -->
+          <img src="assets/hero-ball1.svg"
+            class=" absolute animate-up-down right-6" alt>
+          <img src="assets/hero-ball12.svg"
+            class=" absolute animate-up-down left-6" alt>
+
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="lg:w-1/2 mt-8 lg:mt-0 flex justify-center relative py-5">
+
+        <img
+          src="assets/hero-mascot-fade4.png"
+          alt="AI Trading"
+          class="max-w-full h-auto rounded-lg shadow-lg  animate-down-up  " />
+        <!-- right icons -->
+        <div class=" absolute  flex flex-col gap-2 text-2xl  bottom-[7rem]  right-[0.5rem] ">
+          <a href="#" class="text-white hover:text-white"><i
+              class="fab fa-telegram"></i></a>
+          <a href="#" class="text-white hover:text-white"><i
+              class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white hover:text-white"><i
+              class="fab fa-discord"></i></a>
+          <a href="#" class="text-white hover:text-white"><i
+              class="fab fa-medium"></i></a>
+          <a href="#" class="text-white hover:text-white"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="#" class="text-white hover:text-white"><i
+              class="fab fa-youtube"></i></a>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- hero end -->
+
+    <!-- 3rd sec "stats section" -->
+    <section class="py-10 w-4/5 mx-auto px-5 bg-black">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Box 1 -->
+        <div class="bg-black border border-white rounded-2xl p-6 flex flex-col items-center text-center">
+          <h3 class="text-lg font-semibold text-white">Traders</h3>
+          <h3 id="counter1" class="text-5xl font-bold text-white mt-2">5000+</h3>
+        </div>
+        <!-- Box 2 -->
+        <div class="bg-black border border-white rounded-2xl p-6 flex flex-col items-center text-center">
+          <h3 class="text-lg font-semibold text-white">Traders</h3>
+          <h3 id="counter2" class="text-5xl font-bold text-white mt-2">13,500+</h3>
+        </div>
+        <!-- Box 3 -->
+        <div class="bg-black border border-white rounded-2xl p-6 flex flex-col items-center text-center">
+          <h3 class="text-lg font-semibold text-white">Traders</h3>
+          <h3 id="counter3" class="text-5xl font-bold text-white mt-2">$10M+</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- end of stats section -->
+
+    <!-- 4th: your porfolio section  -->
+    <section class="bg-black text-white  w-4/5 mx-auto py-16 bg-photo bg-cover bg-center ">
+      <div class="container mx-auto ">
+        <h2 class="text-center text-3xl font-bold mb-10">
+          Unlock <br />
+          <span class="text-5xl"> Legendary Trading</span>
+
+        </h2>
+
+        <!-- Content Wrapper -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
+          <!-- Left Content -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-semibold">
+              Your Portfolio <br /><span class="text-green-400 text-3xl">On
+                Autopilot</span>
+            </h3>
+
+            <p class="text-gray-400 font-semibold text-xl">
+              Master the markets with our cutting-edge algorithms or create your
+              own.
+            </p>
+
+            <ul class="space-y-2  text-xl">
+              <li class="flex items-center">
+                <span class="mr-2 text-green-500">&#10003;</span>
+                Plug and Play: Get started in mere minutes! Choose from a
+                library of algorithms created by our team.
+              </li>
+              <li class="flex items-center">
+                <span class="mr-2 text-green-500">&#10003;</span>
+                Custom Automation: Automate your own strategies using the most
+                advanced tools available - the sky is the limit!
+              </li>
+              <li class="flex items-center">
+                <span class="mr-2 text-green-500">&#10003;</span>
+                Full Control: From customizable dashboards and detailed
+                performance insights to strategy backtesting, our platform is an
+                all-in-one control center for all your trading needs.
+              </li>
+            </ul>
+
+            <button
+              class=" text-white border border-white text-xl font-medium px-4 py-1 rounded-full inline-flex items-center hover:bg-gray-200">
+              Start Trading
+              <span class="ml-2 text-3xl">&#8594;</span>
+            </button>
+          </div>
+
+          <!-- Right Content (vedio) -->
+          <div class="flex justify-center">
+            <video autoplay muted loop controls
+              class="rounded-lg shadow-lg  max-w-full h-auto">
+              <source
+                src="assets/landing-page-video-transcode.mp4"
+                type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- background  and mascot section get started -->
+    <div
+      class="relative h-screen bg-cover bg-center bg-fixed min-h-screen py-16 sm:my-20"
+      style="
+        background-image: linear-gradient(#000, #0000 48%, #000),
+          radial-gradient(circle, #000 9%, #0000 50%, #000 75%),
+          url(assets/_techy-background.jpg);
+      ">
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      
+        <img src="assets/mascot-front.png" class="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  max-w-[800px] w-full" alt>
+    
+
+      <!-- Content -->  
+       <div class="absolute z-10  left-[80px]  md:top-[210px] sm:left-[118px] md:left-[73px] lg:left-[160px]" >
+      <div
+        class="  px-6 py-4 flex flex-col  space-y-3 md:flex-row gap-6">
+        <!-- Box 1 -->
+        <div
+          class="bg-black text-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center space-y-4 max-w-sm">
+          <img src="assets/icon-signup.svg" class="w-16" alt />
+          <h2 class="text-xl font-bold text-teal-500">Sign up</h2>
+          <p class="text-gray-300">
+            Create your personal account
+          </p>
+        </div>
+
+        <!-- Box 2 -->
+        <div
+          class="bg-black text-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center space-y-4 max-w-sm">
+          <img src="assets/icon-connect.svg" class="w-16" alt />
+          <h2 class="text-xl font-bold text-green-500">Connect</h2>
+          <p class="text-gray-300">
+            Connect to your favorite exchanges
+          </p>
+        </div>
+
+        <!-- Box 3 -->
+        <div
+          class="bg-black text-white rounded-lg  mt-4 shadow-lg p-6 flex flex-col items-center text-center space-y-4 max-w-sm">
+          <img src="assets/icon-automate.svg" class="w-16" alt />
+          <h2 class="text-xl font-bold text-yellow-500">Automate</h2>
+          <p class="text-gray-300">
+            Deploy your first algorithm in seconds
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- tabs -->
+
+ <div class="container mx-auto px-4 mt-20 hidden lg:block">
+
+  <div class="space-y-12">
+    <div class="text-center">
+      <h2 class="text-white font-bold text-4xl lg:text-5xl leading-tight tracking-tight">
+        Run Algorithms On <br> 
+        <span class="text-green-500">Top Exchanges</span>
+      </h2>
+      <p class="text-gray-400 mt-4 text-lg">Connect with the world's leading trading platforms instantly.</p>
+    </div>
+
+    <div class="flex gap-4 justify-center">
+      <button
+        class="tab-button border-b-2 border-green-500 px-8 py-3 text-white font-bold text-xl transition-all duration-300 hover:text-green-400 active"
+        data-target="#content1">
+        Supported
+      </button>
+      <button
+        class="tab-button border-b-2 border-transparent px-8 py-3 text-gray-400 font-bold text-xl transition-all duration-300 hover:border-green-500 hover:text-white"
+        data-target="#content2">
+        Upcoming
+      </button>
+    </div>
+
+    <div class="content container w-full max-w-6xl mx-auto" id="content1">
+      <div class="grid grid-cols-3 gap-8">
+        
+        <div class="group relative bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl transition-all duration-300 hover:border-green-500/50 hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] flex justify-center items-center">
+          <img src="assets/exchange-img-kucoin.svg" alt="Kucoin" class="w-full max-w-[160px] grayscale group-hover:grayscale-0 transition-all duration-300">
+        </div>
+
+        <div class="group relative bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl transition-all duration-300 hover:border-green-500/50 hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] flex justify-center items-center">
+          <img src="assets/exchange-img-mexc.svg" alt="MEXC" class="w-full max-w-[160px] grayscale group-hover:grayscale-0 transition-all duration-300">
+        </div>
+
+        <div class="group relative bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl transition-all duration-300 hover:border-green-500/50 hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] flex justify-center items-center">
+          <img src="assets/exchange-img-binance.svg" alt="Binance" class="w-full max-w-[160px] grayscale group-hover:grayscale-0 transition-all duration-300">
+        </div>
+
+        <div class="group relative bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl transition-all duration-300 hover:border-green-500/50 hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] flex justify-center items-center">
+          <img src="assets/t1.svg" alt="Exchange" class="w-full max-w-[160px] grayscale group-hover:grayscale-0 transition-all duration-300">
+        </div>
+
+        <div class="group relative bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl transition-all duration-300 hover:border-green-500/50 hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] flex justify-center items-center">
+          <img src="assets/66950b7c2569514105b625e7_exchange-img-gate.svg" alt="Gate.io" class="w-full max-w-[160px] grayscale group-hover:grayscale-0 transition-all duration-300">
+        </div>
+
+        <div class="group relative bg-zinc-900/50 border border-zinc-800 p-8 rounded-2xl transition-all duration-300 hover:border-green-500/50 hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] flex justify-center items-center">
+          <img src="assets/exchange-img-kucoin.svg" alt="Exchange" class="w-full max-w-[160px] grayscale group-hover:grayscale-0 transition-all duration-300">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content hidden w-full max-w-6xl mx-auto" id="content2">
+        </div>
+
+  </div>
+</div>
+
+    <!-- start trading section -->
+    <div class="container w-3/4 mx-auto px-4 py-10  s bg-cover"  style="
+    background-image: linear-gradient(#000, #0000 48%, #000),
+      radial-gradient(circle, #000 9%, #0000 50%, #000 75%),
+      url(assets/_techy-background.jpg);
+  ">
+      <!-- Heading -->
+      <h1 class="text-3xl md:text-5xl font-bold text-white text-center mb-10">Our
+        Features</h1>
+
+      <!-- Grid of Boxes -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Box 1 -->
+        <div
+          class="bg-black  border  rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-ai.svg" alt="Feature 1"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 1 description goes here.</p>
+        </div>
+        <!-- Box 2 -->
+        <div
+          class="bg-black   border  rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-backtest.svg" alt="Feature 2"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 2 description goes here.</p>
+        </div>
+        <!-- Box 3 -->
+        <div
+          class="bg-black   border rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-dashboard.svg" alt="Feature 3"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 3 description goes here.</p>
+        </div>
+        <!-- Box 4 -->
+        <div
+          class="bg-black  border rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-marketplace.svg" alt="Feature 4"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 4 description goes here.</p>
+        </div>
+        <!-- Box 5 -->
+        <div
+          class="bg-black  border rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-staking.svg" alt="Feature 5"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 5 description goes here.</p>
+        </div>
+        <!-- Box 6 -->
+        <div
+          class="bg-black  border rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-terminal.svg" alt="Feature 6"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 6 description goes here.</p>
+        </div>
+        <!-- Box 7 -->
+        <div
+          class="bg-black  border rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-vault.svg" alt="Feature 7"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 7 description goes here.</p>
+        </div>
+        <!-- Box 8 -->
+        <div
+          class="bg-black  border rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+          <img src="assets/awesome-ai.svg" alt="Feature 8"
+            class="w-24 h-24 mb-4">
+          <p class="text-white">Feature 8 description goes here.</p>
+        </div>
+      </div>
+    </div>
+    <!-- trading section end -->
+
+    <!-- champion section with tab -->
+
+    <div class=" w-3/4 mx-auto bg-[url('/dist/assets/background-dark-blobs2.jpg')] bg-cover bg-center  container mt-10">
+
+    <div class="text-white text-center text-2xl font-bold">Plateform <br>Tier</div>
+
+    <div
+      class=" flex flex-row justify-center gap-8  bg-black text-white">
+      
+      <!-- Left Section (Details) -->
+      <div id="content" class="w-2/3  bg-black border rounded-lg shadow-lg">
+        <div id="novice" class="tab-content hidden">
+          <div class="flex flex-col items-center">
+          <img src="assets/novice-icon.svg" class="max-w-20" alt>
+
+          <h2 class="text-2xl font-bold text-yellow-500">Novoice</h2>
+          <p class="text-xl font-semibold">20K TTM</p>   
+          
+          <!-- ul -->
+          <div
+          class="grid grid-cols-2  gap-4 p-6 bg-black text-white rounded-lg shadow-md">
+          <!-- First Column -->
+          <ul class=" font-semibold pl-4">
+            <li ><span class="mr-2 text-white">&#10003;</span>Paper trading</li>
+            <li><span class="mr-2 text-white">&#10003;</span>5 exchange connections</li>
+            <li><span class="mr-2 text-white">&#10003;</span>Customizable dashboard</li>
+            <li><span class="mr-2 text-white">&#10003;</span>Standard algorithms</li>
+            <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+          </ul>
+
+          <!-- Second Column -->
+          <ul class=" font-semibold pl-4 ">
+            <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+            <li> <span class="mr-2 text-white">&#10003;</span>Backtesting</li>
+            <li> <span class="mr-2 text-white">&#10003;</span>Marketplace content</li>
+            <li> <span class="mr-2 text-white">&#10003;</span>Advanced features</li>
+            <li> <span class="mr-2 text-white">&#10003;</span>Additional insights</li>
+          </ul>
+          
+        </div>
+        <button
+            class=" text-white border block mx-auto hover:text-black  border-white text-xl  px-5 py-1 rounded-full font-semibold items-center hover:bg-gray-200">
+            Stake TTM
+            <span class="ml-2 text-3xl">&#8594;</span>
+          </button>
+        </div>      
+        </div>
+
+
+
+
+
+
+        <!-- apperantice -->
+        <div id="apprentice" class="tab-content hidden">
+          
+
+
+          <div class="flex flex-col items-center">
+            <img src="assets/novice-icon.svg" class="max-w-20" alt>
+  
+            <h2 class="text-2xl font-bold text-indigo-500">Apperantice</h2>
+
+            <p class="text-xl font-semibold">20K TTM</p>   
+            
+            <!-- ul -->
+            <div
+            class="grid grid-cols-2 gap-4 p-6 bg-black text-white rounded-lg shadow-md">
+            <!-- First Column -->
+            <ul class=" font-semibold pl-4">
+              <li ><span class="mr-2 text-white">&#10003;</span>Paper trading</li>
+              <li><span class="mr-2 text-white">&#10003;</span>5 exchange connections</li>
+              <li><span class="mr-2 text-white">&#10003;</span>Customizable dashboard</li>
+              <li><span class="mr-2 text-white">&#10003;</span>Standard algorithms</li>
+              <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+            </ul>
+  
+            <!-- Second Column -->
+            <ul class=" font-semibold pl-4">
+              <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Backtesting</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Marketplace content</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Advanced features</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Additional insights</li>
+            </ul>
+            
+          </div>
+          <button
+              class=" text-white border block mx-auto hover:text-black  border-white text-xl  px-5 py-1 rounded-full font-semibold items-center hover:bg-gray-200">
+              Stake TTM
+              <span class="ml-2 text-3xl">&#8594;</span>
+            </button>
+          </div>      
+
+
+
+
+
+        </div>
+        <div id="champion" class="tab-content hidden ">
+          <div class=" flex flex-col justify-center items-center">
+            <img src="assets/champion-detailed.svg" class="max-w-20" alt>
+
+            <h2 class="text-2xl font-bold text-yellow-500">CHAMPION</h2>
+            <p class="text-xl font-semibold">20K TTM</p>
+            <div
+              class=" flex flex-col md:flex-row   gap-4 px-10 bg-black text-white rounded-lg shadow-md">
+              <!-- First Column -->
+              <ul class=" font-semibold  ">
+                <li ><span class="mr-2 text-white">&#10003;</span>Paper trading</li>
+                <li><span class="mr-2 text-white">&#10003;</span>5 exchange connections</li>
+                <li><span class="mr-2 text-white">&#10003;</span>Customizable dashboard</li>
+                <li><span class="mr-2 text-white">&#10003;</span>Standard algorithms</li>
+                <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+              </ul>
+
+              <!-- Second Column -->
+              <ul class=" font-semibold  ">
+                <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+                <li> <span class="mr-2 text-white">&#10003;</span>Backtesting</li>
+                <li> <span class="mr-2 text-white">&#10003;</span>Marketplace content</li>
+                <li> <span class="mr-2 text-white">&#10003;</span>Advanced features</li>
+                <li> <span class="mr-2 text-white">&#10003;</span>Additional insights</li>
+              </ul>
+            </div>
+
+          </div>
+          <button
+            class=" text-white whitespace-nowrap my-2 border block mx-auto hover:text-black  border-white text-xl  px-5 py-1 rounded-full font-semibold items-center hover:bg-gray-200">
+            Stake TTM
+            <span class="ml-2 text-3xl">&#8594;</span>
+          </button>
+        </div>
+        <div id="legend" class="tab-content hidden">
+
+          <div class="flex flex-col items-center">
+            <img src="assets/legend-detailed.svg" class="max-w-20" alt>
+  
+            <h2 class="text-2xl font-bold text-teal-500">Legend</h2>
+            <p class="text-xl font-semibold">20K TTM</p>   
+            
+            <!-- ul -->
+            <div
+            class="grid grid-cols-2 gap-4 p-4 bg-black text-white rounded-lg shadow-md">
+            <!-- First Column -->
+            <ul class=" font-semibold pl-4">
+              <li ><span class="mr-2 text-white">&#10003;</span>Paper trading</li>
+              <li><span class="mr-2 text-white">&#10003;</span>5 exchange connections</li>
+              <li><span class="mr-2 text-white">&#10003;</span>Customizable dashboard</li>
+              <li><span class="mr-2 text-white">&#10003;</span>Standard algorithms</li>
+              <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+            </ul>
+  
+            <!-- Second Column -->
+            <ul class=" font-semibold pl-4">
+              <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Backtesting</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Marketplace content</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Advanced features</li>
+              <li> <span class="mr-2 text-white">&#10003;</span>Additional insights</li>
+            </ul>
+            
+          </div>
+          <button
+              class=" text-white border block mx-auto hover:text-black  border-white text-xl  px-5 py-1 rounded-full font-semibold items-center hover:bg-gray-200">
+              Stake TTM
+              <span class="ml-2 text-3xl">&#8594;</span>
+            </button>
+          </div>      
+        </div>
+      </div>
+
+      <!-- Right Section (Tabs) -->
+      <div id="tabs" class="w-1/3 md:flex flex-col gap-4 hidden">
+        <div tabindex="0" class="tab p-4 bg-black border focus:bg-green-500 rounded-lg cursor-pointer"
+          data-tab="novice">
+          <h3  class="text-lg font-semibold">NOVICE</h3>
+          <p class="text-sm">Free</p>
+        </div>
+        <div tabindex="0" class="tab p-4 bg-black border focus:bg-green-500 rounded-lg cursor-pointer"
+          data-tab="apprentice">
+          <h3 class="text-lg font-semibold">APPRENTICE</h3>
+          <p class="text-sm">Stake 2K TTM</p>
+        </div>
+        <div tabindex="0" class="tab p-4 bg-black border focus:bg-green-500 rounded-lg cursor-pointer"
+          data-tab="champion">
+          <h3 class="text-lg font-semibold">CHAMPION</h3>
+          <p class="text-sm">Stake 20K TTM</p>
+        </div>
+        <div  tabindex="0" class="tab p-4 bg-black border focus:bg-green-500 rounded-lg cursor-pointer"
+          data-tab="legend">
+          <h3 class="text-lg font-semibold">LEGEND</h3>
+          <p class="text-sm">Stake 100K TTM</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- champion end -->
+
+   
+
+
+    
+<div class=" mt-8 md:hidden flex flex-col justify-center items-center bg-black text-white  rounded-lg shadow-md">
+  <div class="border border-gray-500 py-4 px-6">
+  <div class=" flex flex-col justify-center items-center ">
+    <img src="assets/legend-detailed.svg" class="max-w-20" alt>
+
+    <h2 class="text-2xl font-bold text-yellow-500">LEGEND</h2>
+    <p class="text-xl font-semibold">20K TTM</p>
+    </div>
+  <!-- First Column -->
+<ul class="font-semibold mb-4">
+    <li><span class="mr-2 text-white">&#10003;</span>Paper trading</li>
+    <li><span class="mr-2 text-white">&#10003;</span>5 exchange connections</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Customizable dashboard</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Standard algorithms</li>
+    <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+</ul>
+
+<!-- Second Column -->
+<ul class="font-semibold">
+    <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Backtesting</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Marketplace content</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Advanced features</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Additional insights</li>
+</ul>
+</div>
+</div>
+
+
+<div class=" mt-8 md:hidden flex flex-col justify-center items-center bg-black text-white  rounded-lg shadow-md">
+  <div class="border border-gray-500 py-4 px-6">
+  <div class=" flex flex-col justify-center items-center ">
+    <img src="assets/champion-detailed.svg" class="max-w-20" alt>
+
+    <h2 class="text-2xl font-bold text-yellow-500">CHAMPION</h2>
+    <p class="text-xl font-semibold">20K TTM</p>
+    </div>
+  <!-- First Column -->
+<ul class="font-semibold mb-4">
+    <li><span class="mr-2 text-white">&#10003;</span>Paper trading</li>
+    <li><span class="mr-2 text-white">&#10003;</span>5 exchange connections</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Customizable dashboard</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Standard algorithms</li>
+    <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+</ul>
+
+<!-- Second Column -->
+<ul class="font-semibold">
+    <li><span class="mr-2 text-white">&#10003;</span>5 active algorithms</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Backtesting</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Marketplace content</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Advanced features</li>
+    <li><span class="mr-2 text-white">&#10003;</span>Additional insights</li>
+</ul>
+</div>
+</div>
+
+  
+
+
+
+    <!-- power section -->
+    <section
+      class="bg-black  text-white py-24 px-4 flex items-center justify-center relative">
+      <div
+        class="max-w-screen-xl w-full flex flex-col lg:flex-row items-center justify-between gap-8">
+
+        <!-- Left Side: Image -->
+        <div
+          class="flex-1  bg-gradient-to-t from-black via-transparent to-black opacity-50 z-10">
+          <img src="assets/_techy-background.jpg" alt="Trading Image"
+            class="w-full h-[400px] max-w-lg rounded-lg shadow-lg">
+
+          <img src="assets/coin-1-p-500.png" class="absolute top-32 w-36" alt>
+          <img src="assets/coin2-p-500.png" class="absolute top-56 left-40 w-36"
+            alt>
+          <img src="assets/coin-3-p-500.png" class="absolute top-96 w-36" alt>
+
+        </div>
+
+        <!-- Right Side: Heading, Paragraph, List, and Button -->
+        <div class="flex-1 text-center lg:text-left">
+          <h2 class="text-3xl lg:text-4xl font-semibold mb-4">Power Your Trading
+            With TTM</h2>
+          <h3 class="text-lg mb-4 text-gray-400">Unlock your trading potential
+            with our powerful tools</h3>
+          <p class="text-lg mb-6 text-gray-400">Elevate your trading experience
+            with TTM's innovative features that cater to both new and seasoned
+            traders.</p>
+
+          <!-- Lists -->
+          <ul class="list-disc list-inside mb-6 text-lg text-gray-300">
+            <li>Advanced Charting Tools</li>
+            <li>Real-time Data and Alerts</li>
+            <li>Customizable Trading Strategies</li>
+            <li>Comprehensive Analytics & Insights</li>
+          </ul>
+
+          <!-- Button -->
+          <a href="#"
+            class="inline-block py-2 px-6 text-lg font-semibold  bg-white rounded-lg  text-black">
+            Start Trading <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- social media section  -->
+    <section
+      class="bg-black text-white py-16 bg-cover bg-center bg-[url('/dist/assets/background-dark-blobs2.jpg')]">
+      <!-- Section Container -->
+      <div class="container mx-auto px-6 text-center">
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold mb-6">
+          Join the <br />
+          TTM Community
+        </h2>
+
+        <!-- Icons Grid -->
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-6 mb-8">
+          <a href="#" class="text-gray-400 hover:text-white"><i
+              class="fab fa-telegram text-4xl "></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i
+              class="fab fa-twitter text-4xl  "></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i
+              class="fab fa-discord text-4xl"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i
+              class="fab fa-medium text-4xl"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i
+              class="fab fa-linkedin text-4xl"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i
+              class="fab fa-youtube text-4xl"></i></a>
+        </div>
+
+        <!-- Paragraph -->
+        <p class="text-gray-400">
+          Join thousands of traders in the TTM Community to stay updated with
+          the latest trading strategies, insights, and news.
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-black text-white py-10">
+      <div class="container mx-auto px-6 md:flex md:justify-between">
+        <!-- Logo and Newsletter -->
+        <div class="mb-8 md:mb-0">
+          <h2 class="text-xl font-bold mb-4">tradetomato</h2>
+          <p class="mb-4 text-sm">
+            Get insights into Tradetomato, trading tips, and latest crypto news
+            straight to your mailbox!
+          </p>
+          <div class="flex items-center">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="flex-grow py-2 px-4 rounded-l-md bg-gray-800 text-white border-none outline-none" />
+            <button
+              class="bg-white text-black px-4 py-2 rounded-r-md hover:bg-gray-300">
+              Subscribe
+            </button>
+          </div>
+          <p class="mt-2 text-xs">*You can unsubscribe at any time</p>
+        </div>
+
+        <!-- Company Links -->
+        <div class="mb-8 md:mb-0">
+          <h3 class="font-semibold mb-4">Company</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li><a href="#" class="hover:underline">Privacy</a></li>
+            <li><a href="#" class="hover:underline">Terms</a></li>
+            <li><a href="#" class="hover:underline">Docs</a></li>
+            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li><a href="#" class="hover:underline">Marketing</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact and Social Links -->
+        <div>
+          <h3 class="font-semibold mb-4">Get In Touch</h3>
+          <ul class="text-sm space-y-2 mb-4">
+            <li>
+              <a href="mailto:info@tradetomato.com"
+                class="hover:underline">info@tradetomato.com</a>
+            </li>
+            <li>
+              <a href="https://tradetomato.com"
+                class="hover:underline">tradetomato.com</a>
+            </li>
+          </ul>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i
+                class="fab fa-telegram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i
+                class="fab fa-discord"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i
+                class="fab fa-medium"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i
+                class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-gray-800 pt-4 text-center">
+        <p class="text-xs">© Tradetomato 2024. All rights reserved</p>
+        <p class="mt-2 text-xs">Proofed by Hacken | Smart Contract Audit</p>
+      </div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+          // Handle tab click
+          $('.tab-button').click(function () {
+              // Remove 'active' class from all buttons
+              $('.tab-button').removeClass('active');
+              // Add 'active' class to clicked button
+              $(this).addClass('active');
+
+              // Hide all contents
+              $('.content').addClass('hidden');
+              // Show the content corresponding to the clicked tab
+              const target = $(this).data('target');
+              $(target).removeClass('hidden');
+          });
+
+
+
+
+
+          // Show default tab content
+    $("#champion").show();
+    
+  
+  // Tab click event
+  $(".tab").on("click", function () {
+    // Get the target tab content ID
+    const tabId = $(this).data("tab");
+
+    // Hide all tab content
+    $(".tab-content").hide();
+
+    // Show the selected tab content
+    $("#" + tabId).show();
+
+    // Add active style to the clicked tab
+    $(".tab").removeClass("bg-green-800");
+    $(this).addClass("bg-green-800");
+  });
+
+  // Accordion functionality for mobile view
+  if ($(window).width() < 1024) {
+    $("#tabs").addClass("w-full order-last");
+    $(".tab").on("click", function () {
+      // Toggle visibility of tab content
+      const tabId = $(this).data("tab");
+      $("#" + tabId).toggle();
+    });
+  }
+      });
+
+  </script>
+  
+
+</script>
+<script>
+  $(document).ready(function () {
+    // Function to animate the counter
+    function countUp(elementId, start, end, duration, suffix = "") {
+      const $element = $(`#${elementId}`);
+      const increment = (end - start) / (duration / 17);
+      let currentValue = start;
+
+      const interval = setInterval(() => {
+        currentValue += increment;
+        if (currentValue >= end) {
+          currentValue = end;
+          clearInterval(interval);
+        }
+        // Update the text with the rounded value and suffix
+        $element.text(Math.round(currentValue).toLocaleString() + suffix);
+      }, 10);
+    }
+
+    // Start animations for each counter
+    countUp("counter1", 500, 5000, 2000, "+");  // Counter 1: 500 to 5000+
+    countUp("counter2", 4000, 13500, 3000, "+"); // Counter 2: 4000 to 13500+
+    countUp("counter3", 0, 10, 2500, "M+");     // Counter 3: $0 to $10M+
+  });
+</script>
+
+  </body>
+</html>

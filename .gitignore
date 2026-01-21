@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+.vscode/
+
+# Build outputs
+# If you want to host on GitHub Pages, don't ignore 'dist' 
+# Otherwise, ignore it if it's just generated code
+# dist/
+
+# Logs and OS files
+npm-debug.log*
+.DS_Store
+Thumbs.db

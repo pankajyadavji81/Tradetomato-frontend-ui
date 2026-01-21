@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes up-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-up-down {
+  animation: up-down 4s ease-in-out infinite;
+}
+
+/* Smooth background transitions */
+.tab-button.active {
+  border-color: #22c55e;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.05);
+}
+
+/* Glassmorphism card effect */
+.glass-card {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+ 
+  
+/* npx @tailwindcss/cli -i ./src/input.css -o ./dist/style.css --watch */
